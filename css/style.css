@@ -11,13 +11,13 @@
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 15vw 70vw 15vw;
-    grid-template-rows: auto;
-
+    grid-template-columns: 15% 70% 15%;
+    
     grid-template-areas: 
         " header header header "     
         ". about-us ." 
-        "stats-margin-left statictics stats-margin-right";
+        "stats-margin-left statictics stats-margin-right"
+        ". services .";
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -70,9 +70,9 @@ section{
 }
 
 .section-text-content p{
-    font-size: 12px;
+    font-size: 11px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     color:#999999;
     
     padding:0 110px;
@@ -111,16 +111,16 @@ header {
 
 #header-content h1 {
     text-transform: uppercase;
-    font-size: 100px;
+    font-size: 94px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
 #header-content h2 {
     text-transform: capitalize;
-    font-size: 48px;
+    font-size: 45px;
     font-family: 'Kaushan Script', cursive;
-    font-weight: 100;
+    font-weight: 400;
 }
 
 #header-content h2,
@@ -159,7 +159,7 @@ nav ul {
 }
 
 #nav-ul-logo li {
-    font-size: 21px;
+    font-size: 19px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
@@ -167,7 +167,7 @@ nav ul {
 .nav-ul-menu-item {
     display: inline-block;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 9px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     padding: 0 15px;
@@ -304,7 +304,7 @@ nav ul {
     grid-template-rows: auto;
     
     grid-template-areas: 
-        ". item1 . item2 . item3 . item4 . item5  .";
+        ". itemst1 . itemst2 . itemst3 . itemst4 . itemst5  .";
     
     width:100%;
     height:100%;
@@ -323,11 +323,11 @@ nav ul {
     grid-area:stats-margin-right;
 }
 
-.item1{grid-area:item1;}
-.item2{grid-area:item2;}
-.item3{grid-area:item3;}
-.item4{grid-area:item4;}
-.item5{grid-area:item5;}
+.itemST1{grid-area:itemst1;}
+.itemST2{grid-area:itemst2;}
+.itemST3{grid-area:itemst3;}
+.itemST4{grid-area:itemst4;}
+.itemST5{grid-area:itemst5;}
 
 .stats-item{
     position:relative;
@@ -363,3 +363,82 @@ nav ul {
     font-size: 10px;
     font-weight: 500;  
 }
+
+/* Section services */
+
+#services{
+    grid-area:services ;
+}
+
+#services-content{
+    display: grid ;
+    
+    grid-template-columns: repeat(3, 1fr)  ;
+    
+    grid-gap: 10px;
+    
+
+}
+
+
+.all-items{
+    display: grid;
+    grid-template-columns: 1fr 4fr ;
+    
+    grid-template-areas: 
+        "all-i all-h5"
+        ". all-p";
+}
+
+
+.all-items i{
+    grid-area: all-i;
+    
+    margin:auto;
+    font-size: 26px;
+    color: #95e1d3;
+    
+    margin-bottom: -2px ;
+    
+}
+.all-items h5{
+    grid-area: all-h5;
+
+    font-size: 10px ;
+    font-family: Montserrat;
+    font-weight: 700;
+    text-transform: uppercase;
+    color:  #333333;
+    
+    margin-bottom: 12px ;
+    
+    
+}
+.all-items p{
+    grid-area: all-p ;
+
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 400 ;
+    color:  #999999;
+    
+    margin-top: 0 ;
+}
+
+.content-line{
+      grid-column-start: 1; 
+      grid-column-end: 4;
+}
+
+.content-line hr{
+    background-color:#e5e5e5;
+    height: 1px;
+    
+    border-width: 0 ;
+}
+
+
+
+
+
+
